@@ -1,0 +1,1290 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:40:23 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 73812
+License: Customer
+
+Current time: 	Sun Nov 08 18:39:19 CST 2020
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Available disk space: 225 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	E:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4
+Java executable location: 	E:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	qitao
+User home directory: C:/Users/qitao
+User working directory: C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: E:/Xilinx/Vivado
+HDI_APPROOT: E:/Xilinx/Vivado/2019.2
+RDI_DATADIR: E:/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: E:/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: C:/Users/qitao/AppData/Roaming/Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: C:/Users/qitao/AppData/Roaming/Xilinx/Vivado/2019.2/
+Vivado layouts directory: C:/Users/qitao/AppData/Roaming/Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	E:/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project/vivado.log
+Vivado journal file location: 	C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project/vivado.jou
+Engine tmp dir: 	C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project/.Xil/Vivado-73812-QiTao
+
+Xilinx Environment Variables
+----------------------------
+XILINX: E:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: E:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: E:/Xilinx/Vivado/2019.2
+XILINX_VIVADO: E:/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: E:/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 585 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\qitao\OneDrive - The University of Kansas\J1\EECS645\HW10_MIPS_Single_Cycle_Weng\vivado_project\vivado_project.xpr. Version: Vivado v2019.2 
+// Tcl Message: open_project {C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project/vivado_project.xpr} 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project' 
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 1125ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1130 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 592 MB. GUI used memory: 48 MB. Current time: 11/8/20, 6:39:21 PM CST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project/vivado_project.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project' 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 65 MB (+65885kb) [00:00:43]
+// [Engine Memory]: 667 MB (+548280kb) [00:00:43]
+// [GUI Memory]: 78 MB (+9662kb) [00:00:43]
+// [GUI Memory]: 101 MB (+20017kb) [00:00:44]
+// [GUI Memory]: 107 MB (+1470kb) [00:00:45]
+// WARNING: HEventQueue.dispatchEvent() is taking  3919 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2019.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 682 MB. GUI used memory: 54 MB. Current time: 11/8/20, 6:39:43 PM CST
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 710.043 ; gain = 85.453 
+// Project name: vivado_project; location: C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project; part: xc7k70tfbv676-1
+// [GUI Memory]: 113 MB (+600kb) [00:00:46]
+dismissDialog("Open Project"); // bB (cr)
+// [Engine Memory]: 702 MB (+948kb) [00:00:47]
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (cu.vhd) elapsed time: 0.7s
+// Elapsed time: 42 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, CU(behav) (cu.vhd)]", 2, false); // B (F, cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  1116 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 7, false); // B (F, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 723 MB. GUI used memory: 101 MB. Current time: 11/8/20, 6:40:31 PM CST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 7, false, false, false, false, false, true); // B (F, cr) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P (aI, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 119, 218); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 147, 536); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 29, 413); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 14, 409); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'c'); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("top_mips_single_cycle.vhd", 112, 215); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 236, 538); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 262, 593); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 431, 497); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 383, 509); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 383, 509, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 403, 511); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 371, 512); // ch (w, cr)
+// Elapsed time: 234 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 994, 368); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 1011, 471); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 586, 536); // ch (w, cr)
+// Elapsed time: 15 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 378, 500); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 378, 500, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 379, 500); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 391, 494); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 374, 494); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 370, 494); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 396, 495); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 396, 495, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 378, 492); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 369, 472); // ch (w, cr)
+// Elapsed time: 17 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 379, 496); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 379, 496, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 381, 496); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 380, 496); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 373, 496); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 400, 498); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 881, 479); // ch (w, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 1143, 554); // ch (w, cr)
+// Elapsed time: 18 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 35, 326); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 132, 323); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 127, 325); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 246, 326); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 130, 320); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 252, 550); // ch (w, cr)
+// Elapsed time: 17 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 68, 568); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 82, 563); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 38, 555); // ch (w, cr)
+// Elapsed time: 48 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 549, 592); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 100, 472); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 78, 495); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 692, 529); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 133, 495); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 141, 512); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 396, 492); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 404, 517); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 142, 545); // ch (w, cr)
+// Elapsed time: 71 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 1071, 522); // ch (w, cr)
+// Elapsed time: 11 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 1011, 593); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 219, 492); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 972, 519); // ch (w, cr)
+// Elapsed time: 98 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 313, 530); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 312, 502); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 224, 520); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 269, 535); // ch (w, cr)
+// Elapsed time: 37 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 211, 492); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 211, 492, false, false, false, false, true); // ch (w, cr) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [Engine Memory]: 752 MB (+15862kb) [00:13:46]
+// Elapsed time: 14 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 39, 453); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 58 MB. Current time: 11/8/20, 6:52:46 PM CST
+selectCodeEditor("top_mips_single_cycle.vhd", 63, 478); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 338, 476, false, false, false, true, false); // ch (w, cr) - Popup Trigger
+selectCodeEditor("top_mips_single_cycle.vhd", 280, 494); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 374, 458, false, false, false, true, false); // ch (w, cr) - Popup Trigger
+selectMenu(RDIResource.HCodeEditor_BLANK_OPERATIONS, "Blank Operations"); // aa (ao, Popup.HeavyWeightWindow)
+selectCodeEditor("top_mips_single_cycle.vhd", 146, 471); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 334, 342); // ch (w, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // af (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 578, 443); // ch (w, cr)
+// Elapsed time: 614 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_mips_single_cycle.vhd", 1); // i (h, cr)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU(behav) (alu.vhd)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU(behav) (alu.vhd)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// Elapsed time: 187 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), InstrMem_inst : InstrMem(behav) (InstrMem.vhd)]", 3, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), InstrMem_inst : InstrMem(behav) (InstrMem.vhd)]", 3, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), PC_register_inst : PC_register(behav) (pc_register.vhd)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), PC_register_inst : PC_register(behav) (pc_register.vhd)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 23 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// Elapsed time: 11 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 118, 626); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 11 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), PC_register_inst : PC_register(behav) (pc_register.vhd)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), PC_register_inst : PC_register(behav) (pc_register.vhd)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("pc_register.vhd", 296, 526); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 317, 509); // ch (w, cr)
+// Elapsed time: 66 seconds
+selectCodeEditor("pc_register.vhd", 161, 504); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 165, 512); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 165, 512, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("pc_register.vhd", 115, 551); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 47, 527); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DataMem(behav) (DataMem.vhd)]", 5, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DataMem(behav) (DataMem.vhd)]", 5, false, false, false, false, false, true); // B (F, cr) - Double Click
+// [GUI Memory]: 121 MB (+1945kb) [00:30:03]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, InstrMem(behav) (InstrMem.vhd)]", 6, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, InstrMem(behav) (InstrMem.vhd)]", 6, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RegFile(behav) (regfile.vhd)]", 7, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RegFile(behav) (regfile.vhd)]", 7, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU(behav) (alu.vhd)]", 3, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU(behav) (alu.vhd)]", 3, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), PC_register_inst : PC_register(behav) (pc_register.vhd)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), PC_register_inst : PC_register(behav) (pc_register.vhd)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("pc_register.vhd", 86, 516); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 340, 497); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 340, 511); // ch (w, cr)
+typeControlKey((HResource) null, "pc_register.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 211, 570); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 210, 561); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 63 MB. Current time: 11/8/20, 7:22:46 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 58 MB. Current time: 11/8/20, 7:52:47 PM CST
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 310ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 57 MB. Current time: 11/8/20, 8:22:47 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 57 MB. Current time: 11/8/20, 8:52:48 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 57 MB. Current time: 11/8/20, 9:22:48 PM CST
+// Elapsed time: 9262 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_mips_single_cycle.vhd", 1); // i (h, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 33, 367); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 27, 362); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 309 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 399, 555); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 476, 556); // ch (w, cr)
+// Elapsed time: 55 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (F, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pc_register.vhd", 3); // i (h, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 57 seconds
+selectCodeEditor("pc_register.vhd", 251, 329); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_mips_single_cycle.vhd", 1); // i (h, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 297, 255); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // u (O, cr) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // u (O, cr) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project/vivado_project.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'mips_single_cycle_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project/vivado_project.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj mips_single_cycle_tb_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '4' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project/vivado_project.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto 2edf13980c614251b34d8429c3b88229 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot mips_single_cycle_tb_behav xil_defaultlib.mips_single_cycle_tb -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Built simulation snapshot mips_single_cycle_tb_behav ERROR: [Common 17-165] Too many positional options when parsing '-notrace', please type 'webtalk -help' for usage info.  
+// Tcl Message: run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 776.230 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project/vivado_project.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "mips_single_cycle_tb_behav -key {Behavioral:sim_1:Functional:mips_single_cycle_tb} -tclbatch {mips_single_cycle_tb.tcl} -view {{C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/simulation_sources/mips_single_cycle_wave.wcfg}} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2019.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// WARNING: HEventQueue.dispatchEvent() is taking  1398 ms.
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Elapsed time: 18 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// Tcl Message: open_wave_config {C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/simulation_sources/mips_single_cycle_wave.wcfg} 
+// Waveform: addNotify
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 63 MB. Current time: 11/8/20, 9:51:37 PM CST
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Tcl Message: source mips_single_cycle_tb.tcl 
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 750ns 
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 792.977 ; gain = 16.746 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'mips_single_cycle_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 750ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 792.977 ; gain = 16.746 
+// 'd' command handler elapsed time: 20 seconds
+dismissDialog("Run Simulation"); // e (cr)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // E (f, cr)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 64 MB. Current time: 11/8/20, 9:51:41 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 63 MB. Current time: 11/8/20, 9:51:41 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 63 MB. Current time: 11/8/20, 9:51:43 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 63 MB. Current time: 11/8/20, 9:51:44 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 63 MB. Current time: 11/8/20, 9:51:45 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 63 MB. Current time: 11/8/20, 9:51:45 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 63 MB. Current time: 11/8/20, 9:51:46 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 63 MB. Current time: 11/8/20, 9:51:48 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 63 MB. Current time: 11/8/20, 9:51:49 PM CST
+// Elapsed time: 58 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pc_register.vhd", 2); // i (h, cr)
+// Elapsed time: 12 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aA, cr)
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - mips_single_cycle_tb", "DesignTask.SIMULATION");
+// A (cr): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bB (cr):  Close : addNotify
+// TclEventType: WAVEFORM_CLOSE_WCFG
+dismissDialog("Confirm Close"); // A (cr)
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// WARNING: HEventQueue.dispatchEvent() is taking  1566 ms.
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bB (cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), CU_inst : CU(behav) (cu.vhd)]", 7, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), CU_inst : CU(behav) (cu.vhd)]", 7, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), DataMem_inst : DataMem(behav) (DataMem.vhd)]", 6, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), DataMem_inst : DataMem(behav) (DataMem.vhd)]", 6, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), ALU_inst : ALU(behav) (alu.vhd)]", 5, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), ALU_inst : ALU(behav) (alu.vhd)]", 5, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), RegFile_inst : RegFile(behav) (regfile.vhd)]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), RegFile_inst : RegFile(behav) (regfile.vhd)]", 4, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 39 seconds
+selectCodeEditor("regfile.vhd", 94, 546); // ch (w, cr)
+selectCodeEditor("regfile.vhd", 93, 532); // ch (w, cr)
+typeControlKey((HResource) null, "regfile.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regfile.vhd", 484, 475); // ch (w, cr)
+selectCodeEditor("regfile.vhd", 184, 493); // ch (w, cr)
+// Elapsed time: 79 seconds
+selectCodeEditor("regfile.vhd", 465, 389); // ch (w, cr)
+selectCodeEditor("regfile.vhd", 218, 502); // ch (w, cr)
+typeControlKey((HResource) null, "regfile.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regfile.vhd", 400, 493); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 157 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// Elapsed time: 56 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), RegFile_inst : RegFile(behav) (regfile.vhd)]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), RegFile_inst : RegFile(behav) (regfile.vhd)]", 4, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 38 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), PC_register_inst : PC_register(behav) (pc_register.vhd)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), PC_register_inst : PC_register(behav) (pc_register.vhd)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), PC_register_inst : PC_register(behav) (pc_register.vhd)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), InstrMem_inst : InstrMem(behav) (InstrMem.vhd)]", 3, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), InstrMem_inst : InstrMem(behav) (InstrMem.vhd)]", 3, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 46 seconds
+selectCodeEditor("InstrMem.vhd", 962, 331); // ch (w, cr)
+selectCodeEditor("InstrMem.vhd", 59, 547); // ch (w, cr)
+typeControlKey((HResource) null, "InstrMem.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 49 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// Elapsed time: 15 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), InstrMem_inst : InstrMem(behav) (InstrMem.vhd)]", 3, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), InstrMem_inst : InstrMem(behav) (InstrMem.vhd)]", 3, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 38 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), DataMem_inst : DataMem(behav) (DataMem.vhd)]", 6, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd), DataMem_inst : DataMem(behav) (DataMem.vhd)]", 6, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 34 seconds
+selectCodeEditor("DataMem.vhd", 912, 476); // ch (w, cr)
+selectCodeEditor("DataMem.vhd", 245, 538); // ch (w, cr)
+typeControlKey((HResource) null, "DataMem.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "DataMem.vhd", 'v'); // ch (w, cr)
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 36 seconds
+selectCodeEditor("DataMem.vhd", 377, 333); // ch (w, cr)
+selectCodeEditor("DataMem.vhd", 421, 139); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstrMem.vhd", 2); // i (h, cr)
+selectCodeEditor("InstrMem.vhd", 450, 402); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 84 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_single_cycle(struct) (top_mips_single_cycle.vhd)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// Elapsed time: 16 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (F, cr)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // i (N, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, my_package.vhd]", 3, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, my_package.vhd]", 3, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, my_package.vhd]", 3, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 39 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cu.vhd", 7); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.vhd", 6); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regfile.vhd", 5); // i (h, cr)
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, DataMem.vhd]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, DataMem.vhd]", 4, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("DataMem.vhd", 516, 174); // ch (w, cr)
+// Elapsed time: 35 seconds
+selectCodeEditor("DataMem.vhd", 357, 199); // ch (w, cr)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_package.vhd", 8); // i (h, cr)
+selectCodeEditor("my_package.vhd", 119, 495); // ch (w, cr)
+typeControlKey((HResource) null, "my_package.vhd", 'c'); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pc_register.vhd", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstrMem.vhd", 2); // i (h, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, DataMem.vhd]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, DataMem.vhd]", 4, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_package.vhd", 8); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pc_register.vhd", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstrMem.vhd", 2); // i (h, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, DataMem.vhd]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, DataMem.vhd]", 4, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 47 seconds
+typeControlKey((HResource) null, "DataMem.vhd", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 61 seconds
+selectCodeEditor("DataMem.vhd", 800, 519); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("DataMem.vhd", 89, 539); // ch (w, cr)
+// Elapsed time: 24 seconds
+selectCodeEditor("DataMem.vhd", 366, 163); // ch (w, cr)
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "DataMem.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("DataMem.vhd", 388, 475); // ch (w, cr)
+typeControlKey((HResource) null, "DataMem.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("DataMem.vhd", 388, 477); // ch (w, cr)
+selectCodeEditor("DataMem.vhd", 188, 476); // ch (w, cr)
+selectCodeEditor("DataMem.vhd", 933, 481); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, InstrMem.vhd]", 5, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, InstrMem.vhd]", 5, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 44 seconds
+selectCodeEditor("InstrMem.vhd", 447, 458); // ch (w, cr)
+typeControlKey((HResource) null, "InstrMem.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("InstrMem.vhd", 678, 454); // ch (w, cr)
+selectCodeEditor("InstrMem.vhd", 678, 454, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("InstrMem.vhd", 673, 454); // ch (w, cr)
+selectCodeEditor("InstrMem.vhd", 683, 454); // ch (w, cr)
+selectCodeEditor("InstrMem.vhd", 251, 453); // ch (w, cr)
+selectCodeEditor("InstrMem.vhd", 583, 489); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 72 seconds
+selectCodeEditor("regfile.vhd", 300, 565); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 62 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, InstrMem.vhd]", 5, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, InstrMem.vhd]", 5, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, DataMem.vhd]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, DataMem.vhd]", 4, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("DataMem.vhd", 349, 137); // ch (w, cr)
+typeControlKey((HResource) null, "DataMem.vhd", 'c'); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, InstrMem.vhd]", 5, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, InstrMem.vhd]", 5, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("InstrMem.vhd", 894, 437); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 127 MB (+229kb) [03:36:19]
+// Elapsed time: 27 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, InstrMem.vhd]", 5, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, InstrMem.vhd]", 5, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_package.vhd", 8); // i (h, cr)
+selectCodeEditor("my_package.vhd", 892, 484); // ch (w, cr)
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, pc_register.vhd]", 11, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, pc_register.vhd]", 11, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 85 seconds
+floatFrame(PAResourceOtoP.PAViews_CODE, "regfile.vhd"); // aA (aL, cr)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+selectCodeEditor("regfile.vhd", 426, 303); // ch (w, aN)
+// Elapsed time: 35 seconds
+selectCodeEditor("regfile.vhd", 356, 483); // ch (w, aN)
+selectCodeEditor("regfile.vhd", 411, 542); // ch (w, aN)
+selectCodeEditor("regfile.vhd", 469, 543); // ch (w, aN)
+selectCodeEditor("regfile.vhd", 531, 503); // ch (w, aN)
+// Elapsed time: 18 seconds
+selectCodeEditor("regfile.vhd", 581, 584); // ch (w, aN)
+// Elapsed time: 90 seconds
+dockFrame(PAResourceOtoP.PAViews_CODE, "regfile.vhd"); // aA (aL, aN)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, alu.vhd]", 6, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, alu.vhd]", 6, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, cu.vhd]", 7, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, cu.vhd]", 7, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, pc_register.vhd]", 11, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, pc_register.vhd]", 11, false, false, false, false, false, true); // B (F, cr) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 65 MB. Current time: 11/8/20, 10:21:54 PM CST
+// Elapsed time: 125 seconds
+selectCodeEditor("pc_register.vhd", 233, 529); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 233, 521); // ch (w, cr)
+// Elapsed time: 137 seconds
+selectCodeEditor("pc_register.vhd", 324, 515); // ch (w, cr)
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("regfile.vhd", 25, 222); // ch (w, cr)
+typeControlKey((HResource) null, "regfile.vhd", 'c'); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, pc_register.vhd]", 11, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, pc_register.vhd]", 11, false, false, false, false, false, true); // B (F, cr) - Double Click
+typeControlKey((HResource) null, "pc_register.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 1, 514); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("pc_register.vhd", 175, 515); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 175, 515, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("pc_register.vhd", 175, 515); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("regfile.vhd", 169, 365); // ch (w, cr)
+selectCodeEditor("regfile.vhd", 76, 283); // ch (w, cr)
+typeControlKey((HResource) null, "regfile.vhd", 'c'); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, pc_register.vhd]", 11, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, pc_register.vhd]", 11, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("pc_register.vhd", 189, 516); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 134, 580); // ch (w, cr)
+typeControlKey((HResource) null, "pc_register.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 2, 579); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 271, 604); // ch (w, cr)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_package.vhd", 7); // i (h, cr)
+// Elapsed time: 35 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pc_register.vhd", 3); // i (h, cr)
+// Elapsed time: 26 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("regfile.vhd", 189, 356); // ch (w, cr)
+selectCodeEditor("regfile.vhd", 70, 393); // ch (w, cr)
+typeControlKey((HResource) null, "regfile.vhd", 'c'); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, pc_register.vhd]", 11, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, pc_register.vhd]", 11, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("pc_register.vhd", 231, 639); // ch (w, cr)
+typeControlKey((HResource) null, "pc_register.vhd", 'v'); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("regfile.vhd", 71, 411); // ch (w, cr)
+typeControlKey((HResource) null, "regfile.vhd", 'c'); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, pc_register.vhd]", 11, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, pc_register.vhd]", 11, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, pc_register.vhd]", 11, false); // B (F, cr)
+selectCodeEditor("pc_register.vhd", 451, 559); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 450, 554); // ch (w, cr)
+typeControlKey((HResource) null, "pc_register.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 15 seconds
+selectCodeEditor("pc_register.vhd", 107, 573); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 14 seconds
+selectCodeEditor("pc_register.vhd", 320, 555); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("pc_register.vhd", 80, 604); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 156, 575); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 11, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 11, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, my_package-body.vhd]", 10, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, my_package-body.vhd]", 10, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, InstrMem.vhd]", 5, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, InstrMem.vhd]", 5, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, my_package.vhd]", 3, false); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, Unreferenced]", 13); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, Unreferenced, pc_register.vhd]", 14, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, Unreferenced, pc_register.vhd]", 14, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, Unreferenced, pc_register.vhd]", 14, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("pc_register.vhd", 151, 578); // ch (w, cr)
+selectCodeEditor("pc_register.vhd", 146, 572); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstrMem.vhd", 2); // i (h, cr)
+selectCodeEditor("InstrMem.vhd", 379, 359); // ch (w, cr)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("InstrMem.vhd", 350, 456); // ch (w, cr)
+selectCodeEditor("InstrMem.vhd", 378, 461); // ch (w, cr)
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, top_mips_single_cycle.vhd]", 13, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, top_mips_single_cycle.vhd]", 13, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 367, 577); // ch (w, cr)
+// Elapsed time: 33 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 705, 262); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 131, 574); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 3, 578); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 244, 306); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 299, 534); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 276, 372); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 249, 366); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 225, 369); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 225, 369, false, false, false, false, true); // ch (w, cr) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 59 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 186, 614); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 1019, 582); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 149 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 195, 434); // ch (w, cr)
+// Elapsed time: 162 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 675, 283); // ch (w, cr)
+// Elapsed time: 40 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 192, 379); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 199, 401); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 25 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 707, 402); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 614, 387); // ch (w, cr)
+// Elapsed time: 62 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 73, 305); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 315, 410); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 183 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 993, 433); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 841, 456); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 974, 430); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 878, 461); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 266 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 214, 534); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 323, 540); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 216, 558); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 663, 532); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 725, 559); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, alu.vhd]", 6, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, alu.vhd]", 6, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 90 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, top_mips_single_cycle.vhd]", 13, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, top_mips_single_cycle.vhd]", 13, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 616, 528); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 616, 528, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 627, 538); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 627, 538, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 37 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 426, 561); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 19 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 786, 560); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 75 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 416, 569); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 63 MB. Current time: 11/8/20, 10:51:54 PM CST
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("top_mips_single_cycle.vhd", 420, 572); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 1185 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 25, 219); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 488, 325); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 23, 33); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 371, 511); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 393, 488); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 382, 202); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 385, 224); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 376, 198); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 33, 239); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 375, 449); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 55, 199); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 55, 199, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 55, 222, false, true, false, false, false); // ch (w, cr) - Control Key
+selectCodeEditor("top_mips_single_cycle.vhd", 55, 222, false, true, false, false, true); // ch (w, cr) - Control Key - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 59, 203, false, false, true, false, false); // ch (w, cr) - Alt Key
+selectCodeEditor("top_mips_single_cycle.vhd", 59, 203, false, false, true, false, true); // ch (w, cr) - Alt Key - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 59, 221, false, false, true, false, false); // ch (w, cr) - Alt Key
+selectCodeEditor("top_mips_single_cycle.vhd", 59, 221, false, false, true, false, true); // ch (w, cr) - Alt Key - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 55, 204, true, false, false, false, false); // ch (w, cr) - Shift Key
+selectCodeEditor("top_mips_single_cycle.vhd", 55, 204, true, false, false, false, true); // ch (w, cr) - Shift Key - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 52, 216); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 52, 216, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 53, 249); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 53, 249, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 54, 271); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 54, 271, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 54, 291); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 54, 291, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 52, 305); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 52, 305, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 52, 322); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 52, 322, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 55, 347); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 55, 347, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 36, 342); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 35, 325); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 26, 351); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 249, 374); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 160, 201); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 166, 227); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 204, 226); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 159, 223); // ch (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("top_mips_single_cycle.vhd", 694, 218); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 735, 236); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 703, 261); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 724, 281); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 731, 309); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 761, 325); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 822, 344); // ch (w, cr)
+// Elapsed time: 17 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 559, 167); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 140, 227); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 147, 200); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 142, 196); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 334, 200); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 188, 513); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 187, 393); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 186, 368); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 135, 325); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 192, 431); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 188, 473); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 189, 495); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 214, 518); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 214, 533); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 97, 225); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 104, 240); // ch (w, cr)
+// Elapsed time: 11 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 376, 261); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 355, 245); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 378, 238); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_package.vhd", 7); // i (h, cr)
+// Elapsed time: 33 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_mips_single_cycle.vhd", 1); // i (h, cr)
+// Elapsed time: 17 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 105, 428); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 155, 460); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 156, 448); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 171, 471); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 311, 458); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 286, 457); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 413, 456); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 188, 473); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 127, 466); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 284, 475); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 410, 473); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 257, 494); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 173, 494); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 286, 495); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 440, 496); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 198, 522); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 174, 517); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 401, 505); // ch (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("top_mips_single_cycle.vhd", 144, 177); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 141, 178, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 120, 178); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 104, 179); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 289, 182); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 441, 183); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 103, 179); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 111, 176); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 111, 159); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 109, 137); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 109, 116); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 111, 95); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 110, 76); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 142, 180); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 141, 159); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 142, 132); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 142, 122); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 140, 99); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 143, 78); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 231, 212); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 218, 201); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 361, 196); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 546, 203); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 546, 203, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 204, 225); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 345, 222); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_package.vhd", 7); // i (h, cr)
+selectCodeEditor("my_package.vhd", 206, 388); // ch (w, cr)
+selectCodeEditor("my_package.vhd", 206, 388, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "my_package.vhd", 'c'); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_mips_single_cycle.vhd", 1); // i (h, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 505, 226); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 502, 225, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top_mips_single_cycle.vhd", 484, 221); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 467, 222); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 477, 220); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 603, 218); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 709, 232); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top_mips_single_cycle.vhd", 663, 449); // ch (w, cr)
+// Elapsed time: 37 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 659, 445); // ch (w, cr)
+// Elapsed time: 25 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 627, 280); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 413, 515); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 234, 513); // ch (w, cr)
+// Elapsed time: 47 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 269, 154); // ch (w, cr)
+// Elapsed time: 50 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 105, 266); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 461, 266); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 458, 284); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 54 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, regfile.vhd]", 12, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("regfile.vhd", 51, 162); // ch (w, cr)
+typeControlKey((HResource) null, "regfile.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("regfile.vhd", 431, 243); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, top_mips_single_cycle.vhd]", 13, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, top_mips_single_cycle.vhd]", 13, false, false, false, false, false, true); // B (F, cr) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 63 MB. Current time: 11/8/20, 11:21:54 PM CST
+// Elapsed time: 54 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 234, 160); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 422, 168); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 418, 164); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 424, 164); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("top_mips_single_cycle.vhd", 531, 163); // ch (w, cr)
+// Elapsed time: 44 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 701, 180); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 296ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 64 MB. Current time: 11/8/20, 11:51:55 PM CST
+// Elapsed time: 1851 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 644, 285); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 82, 208); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 96, 226); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 94, 222); // ch (w, cr)
+// Elapsed time: 34 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 198, 266); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 362, 269); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 197, 287); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 404, 291); // ch (w, cr)
+// Elapsed time: 17 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 841, 276); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 830, 291); // ch (w, cr)
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 164, 325); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top_mips_single_cycle.vhd", 557, 313); // ch (w, cr)
+// Elapsed time: 35 seconds
+typeControlKey((HResource) null, "top_mips_single_cycle.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 154, 310); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top_mips_single_cycle.vhd", 781, 276); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 776, 296); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 791, 282); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 581, 326); // ch (w, cr)
+selectCodeEditor("top_mips_single_cycle.vhd", 521, 338); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 1008 seconds
+selectCodeEditor("top_mips_single_cycle.vhd", 338, 272); // ch (w, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// Tcl Message: launch_simulation 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Command: launch_simulation  
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project/vivado_project.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'mips_single_cycle_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project/vivado_project.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj mips_single_cycle_tb_vhdl.prj" 
+// PAPropertyPanels.initPanels (top_mips_single_cycle.vhd) elapsed time: 0.2s
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 817.488 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '6' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project/vivado_project.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto 2edf13980c614251b34d8429c3b88229 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot mips_single_cycle_tb_behav xil_defaultlib.mips_single_cycle_tb -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Built simulation snapshot mips_single_cycle_tb_behav 
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 817.488 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/vivado_project/vivado_project.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "mips_single_cycle_tb_behav -key {Behavioral:sim_1:Functional:mips_single_cycle_tb} -tclbatch {mips_single_cycle_tb.tcl} -view {{C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/simulation_sources/mips_single_cycle_wave.wcfg}} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2019.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// WARNING: HEventQueue.dispatchEvent() is taking  1916 ms.
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Elapsed time: 20 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Tcl Message: open_wave_config {C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/HW10_MIPS_Single_Cycle_Weng/simulation_sources/mips_single_cycle_wave.wcfg} 
+// WARNING: HEventQueue.dispatchEvent() is taking  3927 ms.
