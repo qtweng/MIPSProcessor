@@ -10,7 +10,6 @@ ENTITY mips_single_cycle IS
    );
 END mips_single_cycle ;
 
-
 ARCHITECTURE struct OF mips_single_cycle IS
    
    -- PC Register Signals --
@@ -54,6 +53,9 @@ ARCHITECTURE struct OF mips_single_cycle IS
    SIGNAL CU_MemWrite   : std_logic;
    SIGNAL CU_RegDst     : std_logic;
    SIGNAL CU_RegWrite   : std_logic;
+   SIGNAL CU_BNE        : std_logic;
+   SIGNAL CU_Jal        : std_logic;      
+   SIGNAL CU_Jr         : std_logic;
    
    -- Format-Dependent Signals --
    SIGNAL opcode         : std_logic_vector (        opcode_end DOWNTO opcode_start);
@@ -74,6 +76,7 @@ ARCHITECTURE struct OF mips_single_cycle IS
    SIGNAL PC_default       : std_logic_vector (n_bits_address - 1 DOWNTO 0);
    SIGNAL PC_cond_branch   : std_logic_vector (n_bits_address - 1 DOWNTO 0);
    SIGNAL PC_uncond_branch : std_logic_vector (n_bits_address - 1 DOWNTO 0);
+   SIGNAL PC_uncond_jr     : std_logic_vector (n_bits_address - 1 DOWNTO 0);
 
    SIGNAL branch_taken     : std_logic;
 
@@ -108,7 +111,7 @@ ARCHITECTURE struct OF mips_single_cycle IS
 	      RD1      : OUT std_logic_vector (reg_file_width - 1 DOWNTO 0);
 	      RD2      : OUT std_logic_vector (reg_file_width - 1 DOWNTO 0)
 	   );
-	END COMPONENT;
+	END COMPONENT;	
 
 	COMPONENT ALU
 	   PORT( 
@@ -136,16 +139,18 @@ ARCHITECTURE struct OF mips_single_cycle IS
 	   PORT( 
 	      Instr      : IN     std_logic_vector (n_bits_instr - 1 DOWNTO 0);
 	      ALUControl : OUT    std_logic_vector (n_bits_of(n_functions_alu) - 1 DOWNTO 0);
+	      RegDst     : OUT    std_logic;
 	      ALUSrc     : OUT    std_logic;
+	      MemToReg   : OUT    std_logic;
+	      RegWrite   : OUT    std_logic;
+	      MemWrite   : OUT    std_logic; 
 	      BEQ        : OUT    std_logic;
 	      J          : OUT    std_logic;
-	      MemToReg   : OUT    std_logic;
-	      MemWrite   : OUT    std_logic;
-	      RegDst     : OUT    std_logic;
-	      RegWrite   : OUT    std_logic
+	      BNE        : OUT    std_logic;
+	      Jal        : OUT    std_logic;      
+	      Jr         : OUT    std_logic
 	   );
-	END COMPONENT;	
-
+	END COMPONENT;
 
 BEGIN
 
@@ -171,8 +176,8 @@ BEGIN
    -- **************************** --
    
    ----- insert your code here ------
-   
-   -- Format-Dependent Signals --
+
+-- Format-Dependent Signals --
     opcode          <= InstrMem_Instr(opcode_end DOWNTO opcode_start);  
     rs              <= InstrMem_Instr(rs_end DOWNTO rs_start);
     rt              <= InstrMem_Instr(rt_end DOWNTO rt_start);
@@ -191,12 +196,17 @@ BEGIN
     PC_default          <= STD_LOGIC_VECTOR(UNSIGNED(PC_current) + 4);
     -- relative address is immediate_Sign_Extended minus two leftmost bit and shift left two
     relative_address    <= (immediate_Sign_Extended(immediate_Sign_Extended'length - 1 - 2 downto 0) & "00");
-    PC_cond_branch      <= STD_LOGIC_VECTOR(UNSIGNED(PC_default) + UNSIGNED(relative_address));
+    -- uncond_jr is taken from regfile_rd1 when ra1 = $31 = $ra
+    PC_uncond_jr        <= RegFile_RD1;
     -- uncond_branch is direct address for j, takes first four bits of PC and pseudo_address then shift left two
     PC_uncond_branch    <= (PC_default(PC_default'length - 1 downto PC_default'length - 4) & pseudo_address & "00");
+    -- cond branch is PC_default + relative address
+    PC_cond_branch      <= STD_LOGIC_VECTOR(UNSIGNED(PC_default) + UNSIGNED(relative_address));
     
-    branch_taken        <= (CU_BEQ AND ALU_zero) ;
-    PC_next             <= PC_uncond_branch when (CU_J = '1') else
+    branch_taken        <= (CU_BEQ AND ALU_zero) OR (CU_BNE AND NOT ALU_zero) ;
+    -- Priority: uncond_jr(jr), then uncond_branch (j and jal), then cond_branch(beq, bne), then PC+4
+    PC_next             <= PC_uncond_jr when (CU_JR = '1') else
+                           PC_uncond_branch when (CU_J = '1' or CU_JAL = '1') else
                            PC_cond_branch   when (branch_taken = '1') else
                            PC_default;
     -- InstrMem -- 
@@ -206,8 +216,14 @@ BEGIN
     RegFile_RA1      <= rs;
     RegFile_RA2      <= rt;
     RegFile_RegWrite <= CU_RegWrite;
-    RegFile_WA       <= rd WHEN (CU_RegDst = '1') else rt;
-    RegFile_WD       <= DataMem_RD when (CU_MemToReg = '1') else  ALU_C;
+    -- Write to regfile address $31 when Jal, rd when R-Type
+    RegFile_WA       <= STD_LOGIC_VECTOR(TO_UNSIGNED(31, RegFile_WA'length)) when (CU_Jal = '1') else
+                        rd when (CU_RegDst = '1') else
+                        rt;
+    -- Write PC+4 when Jal, DataMem data when MemToReg, otherwise output of ALU
+    RegFile_WD       <= PC_default when (CU_Jal = '1') else
+                        DataMem_RD when (CU_MemToReg = '1') else
+                        ALU_C;
     
     -- ALU
     ALU_A          <= RegFile_RD1;
@@ -221,6 +237,7 @@ BEGIN
     DataMem_A        <= ALU_C;
     DataMem_MemWrite <= CU_MemWrite;
     DataMem_WD       <= RegFile_RD2;
+    
     -- Component Instantiations
 	PC_register_inst : PC_register
 	   PORT MAP ( 
@@ -276,14 +293,17 @@ BEGIN
 	      ALUControl => CU_ALUControl,
 	      ALUSrc     => CU_ALUSrc,
 	      BEQ        => CU_BEQ,
+	      BNE        => CU_BNE,
+	      Jr         => CU_Jr,
 	      J          => CU_J,
+	      Jal        => CU_Jal,
 	      MemToReg   => CU_MemToReg,
 	      MemWrite   => CU_MemWrite,
 	      RegDst     => CU_RegDst,
 	      RegWrite   => CU_RegWrite
 	   );
 
-    
+
    ----------------------------------
 
 END struct;

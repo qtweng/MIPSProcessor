@@ -20,7 +20,8 @@ ARCHITECTURE behavior OF mips_single_cycle_tb IS
    signal rst : std_logic := '1';
 
    -- Clock period definitions
-   constant clk_period : time := 10 ns;
+   --constant clk_period : time := 10 ns; -- 100 MHz
+   constant clk_period : time := 40 ns; -- 25 MHz
  
 BEGIN
  

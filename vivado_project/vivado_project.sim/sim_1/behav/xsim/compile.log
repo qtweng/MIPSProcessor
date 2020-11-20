@@ -1,0 +1,16 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/my_packages/my_package.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/DataMem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'DataMem'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/InstrMem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'InstrMem'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/alu.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/cu.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/my_packages/my_package-body.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/pc_register.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PC_register'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/regfile.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'RegFile'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/top_mips_single_cycle.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mips_single_cycle'

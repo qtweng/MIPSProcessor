@@ -7,13 +7,16 @@ ENTITY CU IS
    PORT( 
       Instr      : IN     std_logic_vector (n_bits_instr - 1 DOWNTO 0);
       ALUControl : OUT    std_logic_vector (n_bits_of(n_functions_alu) - 1 DOWNTO 0);
+      RegDst     : OUT    std_logic;
       ALUSrc     : OUT    std_logic;
+      MemToReg   : OUT    std_logic;
+      RegWrite   : OUT    std_logic;
+      MemWrite   : OUT    std_logic; 
       BEQ        : OUT    std_logic;
       J          : OUT    std_logic;
-      MemToReg   : OUT    std_logic;
-      MemWrite   : OUT    std_logic;
-      RegDst     : OUT    std_logic;
-      RegWrite   : OUT    std_logic
+      BNE        : OUT    std_logic;
+      Jal        : OUT    std_logic;      
+      Jr         : OUT    std_logic
    );
 END CU;
 
@@ -48,35 +51,34 @@ BEGIN
 	RegWrite <= '0';
 	MemWrite <= '0';
 	BEQ <= '0';
+	BNE <= '0';
+	Jr <= '0';
 	J <= '0';
+	Jal <= '0';
 	CASE opcode IS
 		WHEN 0 =>                     -- R-Type
+		    RegDst <= '1';
+            RegWrite <= '1';
             CASE funct IS
                 WHEN 36 =>            -- R-Type, AND
                     ALUControl_int <= 0;
-                    RegDst <= '1';
-                    RegWrite <= '1';
                 WHEN 37 =>            -- R-Type, OR
                     ALUControl_int <= 1;
-                    RegDst <= '1';
-                    RegWrite <= '1';
                 WHEN 32 =>            -- R-Type, add
                     ALUControl_int <= 2;
-                    RegDst <= '1';
-                    RegWrite <= '1';
                 WHEN 34 =>            -- R-Type, sub
                     ALUControl_int <= 6;
-                    RegDst <= '1';
-                    RegWrite <= '1';
                 WHEN 42 =>            -- R-Type, slt
                     ALUControl_int <= 7;
-                    RegDst <= '1';
-                    RegWrite <= '1';
                 WHEN 39 =>            -- R-Type, NOR
                     ALUControl_int <= 12;
-                    RegDst <= '1';
-                    RegWrite <= '1';
-		        WHEN OTHERS => NULL;
+		        WHEN 8 =>             -- R-Type, Jr
+		            Jr <= '1';
+		            RegDst <= '0';
+                    RegWrite <= '0';
+                WHEN OTHERS => 
+                    RegDst <= '0';
+                    RegWrite <= '0';
             END CASE;
 		WHEN 35 =>                    -- I-Type, lw
              ALUControl_int <= 2;
@@ -96,10 +98,25 @@ BEGIN
              ALUControl_int <= 2;
              ALUSrc <= '1';
              RegWrite <= '1';
+        WHEN 5 =>                     -- I-Type, bne
+             ALUControl_int <= 6;
+             BNE <= '1';
+        WHEN 3 =>                     -- J-Type, jal
+             RegWrite <= '1';
+             Jal <= '1';
+        WHEN 13 =>                    -- I-Type, ori
+             ALUControl_int <= 13;
+             ALUSrc <= '1';
+             RegWrite <= '1';
+        WHEN 15 =>                    -- I-Type, lui
+             ALUControl_int <= 15;
+             ALUSrc <= '1';
+             RegWrite <= '1';
 		WHEN OTHERS => NULL;
 	END CASE;
    END PROCESS process1;
 
+
    ----------------------------------
-   
+
 END behav;

@@ -1,0 +1,16 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/DataMem.vhd,1605644175,vhdl,,,,datamem,,,,,,,,
+C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/InstrMem.vhd,1605644175,vhdl,,,,instrmem,,,,,,,,
+C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/alu.vhd,1605864489,vhdl,,,,alu,,,,,,,,
+C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/cu.vhd,1605867665,vhdl,,,,cu,,,,,,,,
+C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/my_packages/ieee_2008/math_real-body.vhdl,1605644175,vhdl,,,,,,,,,,,,
+C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/my_packages/ieee_2008/math_real.vhdl,1605644175,vhdl,C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/my_packages/ieee_2008/math_real-body.vhdl;C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/my_packages/my_package-body.vhd,,,math_real,,,,,,,,
+C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/my_packages/my_package-body.vhd,1605644175,vhdl,,,,,,,,,,,,
+C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/my_packages/my_package.vhd,1605880490,vhdl,C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/DataMem.vhd;C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/InstrMem.vhd;C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/alu.vhd;C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/cu.vhd;C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/my_packages/my_package-body.vhd;C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/pc_register.vhd;C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/regfile.vhd;C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/top_mips_single_cycle.vhd,,,my_package,,,,,,,,
+C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/pc_register.vhd,1605644175,vhdl,,,,pc_register,,,,,,,,
+C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/regfile.vhd,1605644175,vhdl,,,,regfile,,,,,,,,
+C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/design_sources/top_mips_single_cycle.vhd,1605865552,vhdl,,,,mips_single_cycle,,,,,,,,
+C:/Users/qitao/OneDrive - The University of Kansas/J1/EECS645/Project_MIPS_Single_Cycle_Weng/simulation_sources/mips_single_cycle_tb.vhd,1605644176,vhdl,,,,mips_single_cycle_tb,,,,,,,,

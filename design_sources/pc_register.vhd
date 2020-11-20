@@ -1,5 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
 USE work.my_package.ALL;
 
 ENTITY PC_register IS
@@ -11,7 +12,6 @@ ENTITY PC_register IS
    );
 END PC_register;
 
-
 ARCHITECTURE behav OF PC_register IS
 
 BEGIN
@@ -22,17 +22,20 @@ BEGIN
    -- **************************** --
    
    ----- insert your code here ------
-    async_reset_pc : PROCESS(clk, rst) 
-   -- begin procedural code, activated upon change to clk and rst
-    BEGIN
-        IF (rst = '1') THEN
-        -- Reset Actions
-        PC_current <= text_segment_start;
-        ELSIF (clk'EVENT AND clk = '1') THEN
-        -- if clock event 
-        PC_current <= PC_next;
-        END IF;
-    END PROCESS;
+
+   ---------------------------------------------------------------------------
+   process1 : PROCESS (clk, rst)
+   ---------------------------------------------------------------------------
+   BEGIN
+      -- Asynchronous Reset
+      IF (rst /= '0') THEN
+         -- Reset Actions
+         PC_current <= text_segment_start; -- Text Segment Start
+      ELSIF (clk'EVENT AND clk = '1') THEN
+         PC_current <= PC_next;
+      END IF;
+   END PROCESS process1;
+
    ----------------------------------
    
 END behav;

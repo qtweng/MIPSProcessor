@@ -17,7 +17,7 @@ END DataMem;
 ARCHITECTURE behav OF DataMem IS
 
    -- Internal signal declarations
-   SIGNAL data_mem  : mem_type(0 to data_mem_depth - 1);
+   SIGNAL data_mem  : data_mem_type(0 to data_mem_depth - 1);
    SIGNAL A_index : std_logic_vector (A'length - 1 DOWNTO 0);
 
 BEGIN
@@ -28,26 +28,25 @@ BEGIN
    -- **************************** --
    
    ----- insert your code here ------
+
+   A_index <= STD_LOGIC_VECTOR((UNSIGNED(A) - UNSIGNED(data_segment_start))/4) WHEN ((TO_INTEGER((UNSIGNED(A) - UNSIGNED(data_segment_start))/4) >= 0) AND (TO_INTEGER((UNSIGNED(A) - UNSIGNED(data_segment_start))/4) < data_mem_depth)) ELSE (OTHERS => '0');
    
-    A_index <= STD_LOGIC_VECTOR((UNSIGNED(A) - UNSIGNED(data_segment_start))/4)
-         WHEN ((TO_INTEGER((UNSIGNED(A) - UNSIGNED(data_segment_start))/4) >= 0) AND (TO_INTEGER((UNSIGNED(A) - UNSIGNED(data_segment_start))/4) < data_mem_depth)) 
-         ELSE (OTHERS => '0');
-         
-   RD <= data_mem(TO_INTEGER(UNSIGNED(A_index)));
-   
-    write_process : PROCESS(clk,rst)
-    BEGIN
+   ---------------------------------------------------------------------------
+   process1 : PROCESS (clk, rst)
+   ---------------------------------------------------------------------------
+   BEGIN
       -- Asynchronous Reset
       IF (rst = '1') THEN
-        -- Reset Actions
-        data_mem <= initial_data_mem;
+         -- Reset Actions
+         data_mem <= initial_data_mem;
       ELSIF (clk'EVENT AND clk = '1') THEN
-        -- Write-enable, and address guard for write operation
-        IF (MemWrite = '1') AND ((TO_INTEGER((UNSIGNED(A) - UNSIGNED(data_segment_start))/4) >= 0) AND (TO_INTEGER((UNSIGNED(A) - UNSIGNED(data_segment_start))/4) < data_mem_depth)) THEN
-           data_mem(TO_INTEGER(UNSIGNED(A_index))) <= WD;
-        END IF;
+         IF ((MemWrite = '1') AND (((TO_INTEGER((UNSIGNED(A) - UNSIGNED(data_segment_start))/4) >= 0) AND (TO_INTEGER((UNSIGNED(A) - UNSIGNED(data_segment_start))/4) < data_mem_depth)) )) THEN
+            data_mem(TO_INTEGER(UNSIGNED(A_index))) <= WD;
+         END IF;
       END IF;
-   END PROCESS write_process;
+   END PROCESS process1;
+
+   RD <= data_mem(TO_INTEGER(UNSIGNED(A_index)));
 
    ----------------------------------
 
